@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Measurement Form </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad"></script> 
+    <link rel="stylesheet" href="styles.css"> 
+    
+</head>
+
+<body>
+  <section class="hero is-primary is-bold ">
+    <div class="columns m-5 is-vcentered">
+        <div class="column has-text-centered">
+            <h1 class="title has-text-black">XXXX Municipal Council</h1>
+            <h2 class="subtitle is-size-7 m-1">District- XXXX, State- XXXXX</h2>
+            <h3 class="subtitle m-4">Property Assessment Form (Financial Year 2023-24)</h3>
+        </div>
+        <div class="column is-narrow has-text-centered mr-5">
+            <p class="is-size-7 ">Hello!!  <strong class="has-text-white ml-1" id="usernameDisplay" name="surveyorName"></strong></p>
+            <button class="button is-dark is-small m-1" onclick="logout()">Logout</button>
+        </div>
+    </div>
+</section>
+
+
+
+
+  <form id="form" class="container is-max-desktop mt-5" method="post" > 
+    <div class="columns">
+      <div class="column mb-4 has-text-centered" style="background-color: aquamarine;">Inspection details</div>
+        <div class="column mb-4 has-text-centered" style="background-color: aquamarine;">
+          <input class="input" type="text" name="Old property number" placeholder="Old property number" style="margin: 0;">
+        </div>
+    </div>
+      
+      <div class="columns" style="margin: 0;">
+        <input type="hidden" id="username" name="username" value="">
+        
+        <div class="column is-one-third" style="margin: 0;">
+          <div class="column " style="background-color: aquamarine; margin: 0;">Particulars</div>
+        </div>
+        
+        <div class="column is-one-third" style="margin: 0;">
+          <div class="column " style="background-color: aquamarine; margin: 0;">(1) Property details as per records</div>
+        </div>
+        
+        <div class="column is-one-third" style="margin: 0;">
+          <div class="column " style="background-color: aquamarine; margin: 0;">(2) Property details as per spot verification</div>
+        </div>
+      </div>
+      
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">Owner's Name</label>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="ownerName" placeholder="Owner's Name" style="margin: 0;">
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="ownerName2" placeholder="Owner's Name" style="margin: 0;">
+        </div>
+      </div>
+      
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">Name of Occupant</label>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="occupantName" placeholder="Name of Occupant" style="margin: 0;">
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="occupantName2" placeholder="Name of Occupant" style="margin: 0;">
+        </div>
+      </div>
+      
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">Address of the Property</label>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="propertyAddress" placeholder="Address of the Property" style="margin: 0;">
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="propertyAddress2" placeholder="Address of the Property" style="margin: 0;">
+        </div>
+      </div>
+      
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">Mailing address</label>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="mailingAddress" placeholder="Mailing address" style="margin: 0;">
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="mailingAddress2" placeholder="Mailing address" style="margin: 0;">
+        </div>
+      </div>
+
+      
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">Description of property</label>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="propertyD" placeholder="Description of property" style="margin: 0;">
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="propertyD2" placeholder="Description of property" style="margin: 0;">
+        </div>
+      </div>
+
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">Area (sq.m)</label>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="Area" placeholder="Area (sq.m)" style="margin: 0;">
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="Area2" placeholder="Area (sq.m)" style="margin: 0;">
+        </div>
+      </div>
+      
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">Ward Number</label>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="wardNumber" placeholder="Ward Number" style="margin: 0;">
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="wardNumber2" placeholder="Ward Number" style="margin: 0;">
+        </div>
+      </div>
+      
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">Census Number</label>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="censusNumber" placeholder="Census Number" style="margin: 0;">
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="censusNumber2" placeholder="Census Number" style="margin: 0;">
+        </div>
+      </div>
+      
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">TP Number</label>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="tpNumber" placeholder="TP Number" style="margin: 0;">
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="tpNumber2" placeholder="TP Number" style="margin: 0;">
+        </div>
+      </div>
+      
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">City Survey Number</label>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="citySurveyNumber" placeholder="City Survey Number" style="margin: 0;">
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="citySurveyNumber2" placeholder="City Survey Number" style="margin: 0;">
+        </div>
+      </div>
+      
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">Village</label>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="village" placeholder="Village" style="margin: 0;">
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="village2" placeholder="Village" style="margin: 0;">
+        </div>
+      </div>
+      
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">R.S.Number</label>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="rsNumber" placeholder="R.S.Number" style="margin: 0;">
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="rsNumber2" placeholder="R.S.Number" style="margin: 0;">
+        </div>
+      </div>
+      
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">R. Block Number</label>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="blockNumber" placeholder="R. Block Number" style="margin: 0;">
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <input class="input" type="text" name="blockNumber2" placeholder="R. Block Number" style="margin: 0;">
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  
+      <div class="column m-4" style="background-color: aquamarine;">(3) Regarding property </div>
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label" >(a) Is it a Government property?</label>
+          <div class="select">
+              <select name="governmentExemption" >
+                  <option value="" selected disabled >Select an option</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+              </select>
+          </div>
+      </div>
+      <div class="column is-one-third" style="margin: 0;">
+        <label class="label">(b) Use of property</label>
+        <div class="select">
+        <select name="propertyUse" >
+          <option value="" selected disabled >Select an option</option>
+          <option value="Residential"> Residential</option>
+          <option value="Non Residential"> Non Residential</option>
+        </select>
+        </div>
+      </div>
+
+
+      <div class="column is-one-third" style="margin: 0;">
+        <label class="label">(c) Type of residential building</label>
+        <div class="select">
+          <select name="residentialType" >
+            <option value="" selected disabled >Select an option</option>
+            <option value="Independent bungalow"> Independent bungalow  </option>
+            <option value="Tenement"> Tenement </option> 
+            <option value="Row-house"> Row-house  </option>
+            <option value="Flat"> Flat</option>
+            <option value="Village house"> Village house  </option>
+            <option value="Mud house"> Mud house   </option>
+            <option value="Shack "> Hut  </option>
+          </select>
+          </div>
+      </div>
+      </div>
+
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">(d) New code as per non-residential use (to be written as per list) </label>
+          <input class="input mb-2" type="text" name="newCode" placeholder="input text">
+        </div>
+          <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">(e) Use of non-residential building (to be written as per list) </label>
+          <input class="input mb-2" type="text" name="nonResidentialUse" placeholder="input text">
+        </div>
+      </div>
+
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label">(f)Availability of drinking water source?</label>
+            <div class="select">
+              <select name="waterConnection" >
+                  <option value="" selected disabled >Select an option</option>
+                  <option value="Within premises">Within premises </option>
+                  <option value="Near to premises">Near to premises</option>
+                  <option value="Away">Away</option>
+              </select>
+          </div>
+      </div> 
+
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">(g) Main source of drinking water ? </label>
+          <div class="select">
+            <select name="waterSource" >
+                <option value="" selected disabled >Select an option</option>
+                <option value="Tap water - Treated">Tap water - Treated </option>
+                <option value="Tap water - untreated">Tap water - Untreated</option>
+                <option value="Well">Well</option>
+                <option value="Hand pump">Hand pump</option>
+                <option value="Tubewell/Borehole">Tubewell/Borehole</option>
+                <option value="River/Canal/Tank/Pond/Lake">River/Canal/Tank/Pond/Lake</option>
+                <option value="Packaged water/Water Bottle">Packaged water/Water Bottle</option>
+                <option value="Water tanker">Packaged water/Water Bottle</option>
+            </select>
+        </div>
+    </div> 
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">(h) Size of the tap water connection. </label>
+          <div class="select">
+            <select name="ConnectionSize" >
+                <option value="" selected disabled >Select an option</option>
+                <option value="Half inch">Half inch </option>
+                <option value="One inch">One inch</option>
+                <option value="One and half inch">One and half inch</option>
+                <option value="two inch">two inch</option>
+              </select>
+        </div>
+        </div>
+      </div>
+
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label">(i)  Does the property have the toilet on the premises??</label>
+          <div class="select">
+            <select name="toilet" >
+                <option value="" selected disabled >Select an option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+          </div>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">(j) Where is your toilet outlet (toilet pipe) connected to?</label>
+          <div class="select">
+            <select name="toiletConnected" >
+                <option value="" selected disabled >Select an option</option>
+                <option value="Septic Tank with sewer">Septic Tank with sewer</option>
+                <option value="Septic Tank with soak pit">Septic Tank with soak pit</option>
+                <option value="Soak pit">Soak pit</option>
+                <option value="Single pit">Single pit</option>
+                <option value="Twin pit">Twin pit</option>
+                <option value="Open drain">Open drain</option>
+            </select>
+          </div>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">(j) Kitchen/bathroom outlet (wastewater pipe) connected to ? </label>
+          <div class="select">
+            <select name="wasteWaterConnected" >
+                <option value="" selected disabled >Select an option</option>
+                <option value="Open drainage">Open drainage</option>
+                <option value="Close drainage">Close drainage</option>
+                <option value="No drainage">No drainage</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label">(l)  Does the property have the rain water harvesting structure??</label>
+          <div class="select">
+            <select name="RWH" >
+                <option value="" selected disabled >Select an option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+          </div>
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label has-text-left">(m) Total capacity of water storage tank connected to RWH structure. </label>
+          <input class="input mb-2" type="text" name="waterConnections" placeholder="input text">
+        </div>
+        <div class="column is-one-third" style="margin: 0;">
+          <label class="label">(n)  Does the property have solar system for electricity  ??</label>
+          <div class="select">
+            <select name="Solar" >
+                <option value="" selected disabled >Select an option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+          </div> 
+        </div>
+      </div>
+
+      <div class="column m-4" style="background-color: aquamarine;">(4) Regarding open space under prime property</div>
+      
+      <div class="columns" style="margin: 0;">
+        <div class="column is-one-third" style="margin: 0;">
+        <label class="label has-text-left">(o) Area of open space having both construction and open space (sq.m.) </label>
+        <input class="input mb-2" type="text" name="openSpaceArea" placeholder="input text">
+      </div>
+      <div class="column is-one-third" style="margin: 0;">
+        <label class="label has-text-left">(p) If there is only open land/plot then its area </label>
+        <input class="input mb-2" type="text" name="plotArea" placeholder="input text">
+      </div>
+      </div>
+      
+    <div class="column m-4" style="background-color: aquamarine;">(5) Regarding construction</div>
+    <div class="columns" style="margin: 0;">
+
+      <div class="column is-one-third" style="margin: 0;">
+      <label class="label has-text-left">(q) Year of construction (in AD 1980) </label>
+      <input class="input mb-2" type="text" name="constructionYear" placeholder="input text">
+    </div>     
+    </div>
+
+      <div class="column m-4" style="background-color: aquamarine;">(6) Signature here</div>
+      <div class="box mx-4 has-text-right ">
+        <div class="column">
+        <input   id="clear-btn" class="button is-small is-grey" type="button" value="X" />
+        </div>
+      <canvas id="signature-pad" width="800" height="200" ></canvas>
+      </div>
+      
+
+    
+  <div class="column m-4" style="background-color: aquamarine;">(7) Remarks (If any) </div>
+      <div class="column field">
+        <div class="control">
+          <textarea class="textarea" name="remarks" placeholder="Textarea"></textarea>
+        </div>
+    </div>
+
+    <div class="columns is-flex" style="margin: 0; flex-direction: row; align-items: flex-start;">
+      <label class="checkbox" style="margin-right: 20px;"> 
+        <input class="mb-4" type="checkbox" name="checkbox1" required> 
+        All the above details are filled in my presence.
+      </label>
+      <label class="checkbox" style="margin-right: 20px;"> 
+        <input type="checkbox" name="checkbox2" required> 
+        The details filled in the form are filled as per the respondent after spot inspection. The measurements of the property are taken very precisely and no part is left out of measurement. Which is guaranteed.
+      </label>
+      <label class="checkbox"> 
+        <input type="checkbox" name="checkbox3" required> 
+        Complete details have been filled in the above form. No detail is left out.
+      </label>
+    </div>
+    
+
+
+
+      <div class="column has-text-centered ">
+        <div class="field is-grouped is-centered m-5">
+          <div class="control mr-5">
+            <button id="submitBtn" class="button is-dark mr-5">Submit</button>
+          </div>
+        </div>
+      </div>
+  </form>
+
+
+
+      <section class="hero is-small has-background-primary">
+        <div class="content has-text-centered mb-5 mt-5">
+          <p>
+            This website is designed by givs01 for <a href="https://cwas.org.in/" target="_blank">Center for Water and Sanitation</a>.
+            All rights reserved.
+          </p>
+        </div>
+      </section>
+
+
+      
+      <section id="successPopup" class="modal is-mobile">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+        <div class="column has-text-centered mb-4">
+          <div class="box mb-4">
+            <p class="m-4">Form submitted successfully !!!</p>
+            <button class="button is-dark is-small" > Okay </button>
+          </div>
+        </div> 
+        </div>
+      </section>
+
+      <section id="canvasPopup" class="modal is-mobile">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+        <div class="column has-text-centered mb-4">
+          <div class="box mb-4">
+            <p class="m-4">You forget to do signature</p>
+            <button class="button is-dark is-small" > Okay </button>
+          </div>
+        </div> 
+        </div>
+      </section>
+
+
+
+      <section id="submitPopup" class="modal is-mobile">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+        <div class="column has-text-centered mb-4">
+          <div class="box mb-4">
+            <div class="loader2"></div>
+            <br>
+            <p class="m-4">Please wait !!  Sending data to server..........</p>
+          </div>
+        </div> 
+        </div>
+      </section>
+
+
+      <script src="script.js"></script>
+</body>
+</html>

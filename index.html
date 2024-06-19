@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <section class="hero is-primary is-bold">
+        <div class="hero-head">
+        </div>
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title has-text-black">Property Assessment Portal</h1>
+                <h5 class="subtitle m-2  is-size-7">Version-1.0</h5>
+            </div>
+        </div>
+    </section>
+
+    <div class="container container-fullheight">
+        <div class="columns is-vcentered">
+            <div class="column">
+                <img src="IMH-1.jpg" alt="" style="max-width: 82%;">
+            </div>
+            <div class="column">
+                <div class="columns is-centered is-vcentered">
+                    <div class="column is-one-third">
+                        <form id="loginForm is-centered is-vcentered">
+                            <div class="field">
+                                <label class="label">Username</label>
+                                <div class="control">
+                                    <input class="input" type="text" id="username" placeholder="Enter username">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Password</label>
+                                <div class="control">
+                                    <input class="input" type="password" id="password" placeholder="Enter password">
+                                </div>
+                            </div>
+                            <div class="field is-centered is-vcentered">
+                                <div class="control">
+                                    <button id="login-btn" type="button" class="button is-dark" onclick="login()">Login</button>
+                                </div>
+                            </div>
+                            <p id="errorMsg" class="has-text-danger"></p>
+                            <div class="columns is-centered is-mobile">
+                                <div class="loader" id="loader1"></div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero is-small has-background-primary">
+        <div class="content has-text-centered mb-5 mt-5">
+          <p>
+            This website is designed by givs01 for <a href="https://cwas.org.in/" target="_blank">Center for Water and Sanitation</a>.
+            All rights reserved.
+          </p>
+        </div>
+      </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
